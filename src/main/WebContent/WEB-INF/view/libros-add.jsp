@@ -9,7 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>Libros</h1>
+<button onclick="window.location.href='/ismac-liberia-web2/libros/findOne?idLibro=${item.idLibro}&opcion=1';return false;"></button>
+Agregar
 	<form action="add" method="post">
 		
 		<input type="hidden" id="idLibro" name="idLibro" value="${libro.idLibro}" >
@@ -30,7 +32,7 @@
 		<input type="text" id="idioma" name="idioma" value="${libro.idioma}">
 		<br/>	
 		Fecha de Publicación
-		<input type="date" id="fechaPublicacion" name="fechaPublicacion" value="${libro.fechaPublicacion}">
+		<input type="date" id="fechaPublicacion" name="fechaPublicacion" value="${ fn:substring(libro.fechaPublicacion,0,10}">
 		<br/>	
 		Descripcion
 		<input type="text" id="descripcion" name="descripcion" value="${libro.descripcion}">
@@ -55,21 +57,21 @@
 		<br/>
 		Categoria
 		<select id="idCategoria" name="idCategoria">
-			<option value="1"> 1 </option>
-			<option value="2"> 2 </option>
-			<option value="3"> 3 </option>
+		<c:forEach var="item" items="${categorias}">
+		</c:forEach>
 		</select>
 			
 		<br/>
 		Autor
 		<select id="idAutor" name="idAutor">
-			<option value="1"> 5 </option>
-			<option value="2"> 6 </option>
-			<option value="3"> 7 </option>
+		<c:forEach var="item" items="${autores }">
+		<option value="${item.idAutor}"  ${item.idAutor==libro.autor.idAutor?'selected' : ''}> ${item.nombre} ${item.apellido}</option>
+		
+		   </c:forEach>
 		</select>	
-			
-
-
+			<br/>
+			<button type="submit"onclick="">Guardar </button>
+			<button type="button"onclick="window.location.href='/ismac-liberia-web2/libros/findAll';retrun false;">Cancelar </button>	
 	</form>
 </body>
 </html>

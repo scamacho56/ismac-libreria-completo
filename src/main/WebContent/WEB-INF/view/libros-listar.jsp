@@ -11,7 +11,7 @@
 <body>
 	<h1>Libros</h1>
 		
-			<button onclick="window.location.href='/ismac-libreria-matutino-web/libros/findOne?opcion=1'; return false;">					
+			<button onclick="window.location.href='/ismac-libreria-web2/libros/findOne?opcion=1'; return false;">					
 				Agregar																					
 			</button>
 		
@@ -52,17 +52,17 @@
 					<td> ${item.ISBN}</td>												
 					<td> ${item.numEjemplares}</td>				
 					<td> 
-						<img alt="Portada de libro" width="100" height="100" src="${pageContext.request.contextPath}/resources/img/${item.portada}" />						
+						<img alt="Portada de libro" width="100" height="100" src="${pageContext.request.contextPath}/resources/img/${item.portada}" >						
 					</td>				
 					<td> ${item.presentacion}</td>				
 					<td> ${item.precio}</td>				
 					<td> ${item.categoria.categoria}</td>				
 					<td> ${item.autor.nombre} ${item.autor.apellido}</td>				
 					<td> 
-						<button onclick="window.location.href='/ismac-libreria-matutino-web/libros/findOne?idLibro=${item.idLibro}&opcion=1'; return false;">						
+						<button onclick="window.location.href='/ismac-libreria-web2/libros/findOne?idLibro=${item.idLibro}&opcion=1'; return false;">						
 							Actualizar																									
 						</button>
-						<button onclick="window.location.href='/ismac-libreria-matutino-web/libros/findOne?idLibro=${item.idLibro}&opcion=2'; return false;">						
+						<button onclick="window.location.href='/ismac-libreria-web2/libros/findOne?idLibro=${item.idLibro}&opcion=2'; return false;">						
 							Eliminar																									
 						</button>
 					</td>
