@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<h1> HOLA MUNDO DESDE JSP</h1>
-
+         <h1> HOLA MUNDO DESDE LIBRERIA TOMCAT </h1>
+         
 </body>
 </html>
